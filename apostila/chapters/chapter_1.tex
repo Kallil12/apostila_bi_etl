@@ -1,0 +1,73 @@
+\chapter{Methodologies}
+
+In the IT context, a methodology refers to a structured approach or set of principles and practices that guide the planning, development, implementation, and management of IT projects or processes. It provides a systematic framework for organizing and executing tasks, as well as a common language and set of tools to facilitate collaboration among team members. A methodology encompasses a range of activities, techniques, and guidelines tailored to address specific challenges and ensure successful outcomes in IT projects.
+
+A methodology typically outlines a step-by-step process for undertaking IT initiatives, including project initiation, requirements gathering, design, development, testing, deployment, and maintenance. It may incorporate various methodologies or frameworks, such as Agile, Waterfall, Scrum, or Lean, depending on the specific needs of the project. The choice of methodology often depends on factors such as project size, complexity, team structure, and organizational culture.
+
+A well-defined methodology brings several benefits to the IT context. It promotes consistency and standardization in project execution, allowing for more predictable outcomes and better resource management. It helps identify and mitigate risks early in the project lifecycle, facilitating proactive decision-making. Additionally, a methodology supports effective communication and collaboration among project stakeholders, ensuring shared understanding and alignment of objectives. By providing a structured approach, a methodology enhances project transparency, facilitates progress tracking, and enables continuous improvement through feedback and lessons learned.
+
+\section{Agile}
+
+Agile is an iterative and collaborative approach that focuses on flexibility and adaptability. It emphasizes frequent communication, incremental development, and delivering working software in short iterations.
+
+\section{Waterfall}
+
+Waterfall is a sequential and linear approach where each phase of a project is completed before moving to the next one. It follows a structured process with defined milestones, making it suitable for projects with well-defined requirements and minimal changes.
+
+\section{Scrum}
+
+Scrum is an Agile framework that utilizes cross-functional teams to deliver software incrementally. It involves iterative sprints, daily stand-up meetings, and continuous collaboration to foster flexibility and rapid development.
+
+\section{Kanban}
+
+Kanban is a visual project management approach that focuses on continuous delivery and workflow optimization. It uses a Kanban board to visualize tasks, limit work in progress, and optimize the flow of work.
+
+\section{Lean}
+
+Lean methodology aims to eliminate waste and maximize value in the software development process. It emphasizes continuous improvement, customer focus, and efficient resource utilization.
+
+\section{DevOps}
+
+DevOps combines software development (Dev) and IT operations (Ops) to enhance collaboration and streamline the software delivery lifecycle. It focuses on automation, continuous integration, continuous delivery, and close collaboration between development and operations teams.
+
+\section{Rapid Application Development (RAD)}
+
+RAD is a methodology that emphasizes rapid prototyping and iterative development. It involves user feedback and frequent iterations to quickly build and refine software applications.
+
+\section{Extreme Programming (XP)}
+
+XP is an Agile methodology that emphasizes close collaboration, continuous feedback, and a high degree of customer involvement. It emphasizes practices like test-driven development, pair programming, and frequent releases.
+
+\section{Spiral}
+
+The Spiral methodology is a risk-driven approach that combines elements of both waterfall and iterative development. It involves iterative cycles where the project progresses through planning, risk analysis, prototyping, and customer evaluation.
+
+\section{Feature-Driven Development (FDD)}
+
+FDD is an iterative and incremental methodology focused on delivering tangible features quickly. It emphasizes domain modeling, iterative development, and feature-level planning and tracking.
+
+\chapter{Important ETL Concepts}
+
+In the context of IT, ETL stands for Extract, Transform, Load, which is a process used to integrate and consolidate data from various sources into a target system or data warehouse. ETL plays a crucial role in data management and enables organizations to extract valuable insights and make informed business decisions.
+
+The first step in the ETL process is extraction, where data is collected from different sources such as databases, files, APIs, or external systems. This involves retrieving relevant data based on defined criteria and requirements. Once the data is extracted, it undergoes transformation, which involves cleaning, validating, and structuring the data to ensure consistency, accuracy, and compatibility with the target system. Transformations may include data cleansing, data enrichment, data aggregation, and applying business rules or calculations.
+
+Finally, the transformed data is loaded into the target system, typically a data warehouse or a data mart. This step involves mapping the transformed data to the appropriate tables or entities in the target system, ensuring data integrity and maintaining the overall data structure. The loaded data can then be used for reporting, analysis, and decision-making purposes.
+
+\section{Slow Changing Dimensions (SCDs)}
+
+Slow Changing Dimensions refer to the handling and management of slowly changing data in a data warehousing environment. In ETL processes, SCDs are used to track and manage changes to dimensional attributes over time.
+
+SCDs are essential because they enable the capture and representation of historical data in a data warehouse. This is particularly useful when analyzing trends, performing historical comparisons, or conducting time-series analysis.
+
+There are different types of Slow Changing Dimensions, including:
+
+\begin{itemize}
+	\item Type 1 SCD: Overwrite the existing dimension attribute with the new value, effectively losing the historical information. This approach is suitable when historical data is not needed or when the dimension attribute is not expected to change over time.
+	
+	\item Type 2 SCD: Maintain a separate row for each change in the dimension attribute, creating a new record with an updated attribute value and an assigned surrogate key. This approach allows for historical tracking but can lead to data redundancy.
+	
+	\item Type 3 SCD: Add new columns to the dimension table to track specific changes, typically storing the current value and previous value of the attribute. This approach offers limited historical tracking but can help maintain simplicity in the data model.
+	
+	\item Type 4 SCD: Create a separate history table to store all changes to the dimension attribute, while the main dimension table only contains the current value. This approach provides comprehensive historical tracking while minimizing redundancy in the main dimension table.
+\end{itemize}
