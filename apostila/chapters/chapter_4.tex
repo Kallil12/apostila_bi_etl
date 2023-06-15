@@ -1,0 +1,38 @@
+\chapter{SQL QUESTIONS}
+
+This chapter is focused on explaining some more advanced concepts, so assuming that you are already familiar with SQL basic concepts we will move forward and present some questions that I faced during job interviews and some others that I found on the internet.
+\section{Views vs Stored Procedrures}
+
+In SQL, views and stored procedures are both database objects that serve different purposes. Here are the key differences between views and stored procedures:
+
+Purpose:
+
+Views: A view is a virtual table that is derived from one or more tables or other views. It provides a way to present data from underlying tables in a customized or simplified manner. Views are primarily used for querying and reporting purposes.
+
+Stored Procedures: A stored procedure is a named set of SQL statements that are stored in the database and executed as a unit. It is used to encapsulate a series of database operations and logic that can be called and executed repeatedly.
+Data Modification:
+
+Views: By default, views are typically used for reading data rather than modifying it. While you can define an "updatable view" that allows certain types of modifications, such as updating or deleting rows, the level of flexibility is limited compared to stored procedures.
+
+Stored Procedures: Stored procedures can include data modification statements (e.g., INSERT, UPDATE, DELETE) to modify the data in tables. They allow for dynamic and complex data manipulation within the procedure.
+Execution and Result:
+
+Views: Views are treated as table-like objects and can be used in queries like a table. When a query references a view, the underlying query associated with the view is executed, and the result is returned as if querying a table.
+
+Stored Procedures: Stored procedures are explicitly executed by calling their name using the EXEC or CALL statement. They can return multiple result sets or output parameters.
+Persistence:
+
+Views: Views do not store any data themselves. They are defined queries, and their results are dynamically generated based on the underlying tables or views each time they are referenced. Views do not persist data.
+Stored Procedures: Stored procedures are saved in the database and persist even after the database session ends. They can be called and executed whenever needed.
+Parameters:
+
+Views: Views do not accept parameters directly. They are predefined queries that return a result set based on the defined query structure and underlying tables/views.
+Stored Procedures: 
+
+Stored procedures can accept input parameters, allowing you to pass values into the procedure when it is called. Parameters provide flexibility to execute the procedure with different input values.
+
+In summary, views are primarily used for querying and reporting data in a customized manner, while stored procedures are used to encapsulate and execute complex operations and logic. Views provide a virtual representation of data, while stored procedures allow for dynamic data manipulation and can accept parameters.
+
+\section{Intermediate and advanced concepts, Q\&A}
+
+
